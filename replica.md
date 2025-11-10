@@ -2,7 +2,7 @@
 
 ## 📋 Objetivo da Atividade
 
-Criar uma réplica da interface do Google Gemini em HTML5 e CSS3, reproduzindo fielmente o layout, cores e elementos visuais da aplicação. Esta atividade tem como objetivo praticar técnicas de layout moderno com CSS Grid e Flexbox, além de desenvolver habilidades de observação e reprodução de interfaces profissionais.
+Criar uma réplica da interface do Google Gemini em HTML5 e CSS3, reproduzindo fielmente o layout, cores e elementos visuais da aplicação.
 
 ## 🎯 Descrição
 
@@ -626,13 +626,6 @@ body {
 - [ ] Garantir que o campo de entrada seja focável
 - [ ] Testar acessibilidade com atributos aria-label
 
-### Responsividade
-- [ ] Implementar media query para tablets (max-width: 768px)
-- [ ] Ocultar sidebar em mobile por padrão
-- [ ] Adaptar tamanhos de fonte para telas menores
-- [ ] Ocultar textos longos em botões em telas pequenas
-- [ ] Testar layout em diferentes resoluções
-
 ### Refinamentos e Detalhes
 - [ ] Ajustar espaçamentos (padding e margin) para corresponder ao design
 - [ ] Verificar alinhamento de todos os ícones
@@ -647,18 +640,6 @@ body {
 - [ ] Variáveis CSS definidas e utilizadas consistentemente
 - [ ] Remover código não utilizado
 
-### Validação e Testes
-- [ ] Validar HTML no [W3C Validator](https://validator.w3.org/)
-- [ ] Validar CSS no [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
-- [ ] Testar em diferentes navegadores (Chrome, Firefox, Safari)
-- [ ] Testar responsividade em diferentes dispositivos
-- [ ] Verificar acessibilidade básica
-
-### Entrega Final
-- [ ] Arquivos nomeados corretamente: `replica.html` e `replica.css`
-- [ ] Código commitado no GitHub
-- [ ] Screenshot da réplica criada para comparação
-- [ ] Documentar dificuldades encontradas (opcional)
 
 ---
 
@@ -710,16 +691,17 @@ body {
 
 Depois de completar a réplica básica, experimente:
 
-1. **Menu Hambúrguer Funcional**: Implemente JavaScript para abrir/fechar a sidebar em mobile
-2. **Ícones Profissionais**: Substitua emojis por Google Material Icons ou Font Awesome
-3. **Dark Mode**: Crie uma versão com tema escuro
-4. **Animações**: Adicione animações de entrada nos elementos
-5. **Campo de Input Expansível**: Faça o campo de entrada crescer ao focar
-6. **Dropdown Funcional**: Implemente o dropdown "2.5 Pro" com opções
-7. **Histórico Interativo**: Adicione mais interações ao clicar nas conversas recentes
-8. **Tooltips**: Adicione tooltips nos ícones ao passar o mouse
-9. **Teclado Virtual**: Simule a abertura de um teclado virtual ao clicar no campo
-10. **Transições de Página**: Adicione transições suaves entre estados
+1. **Responsividade** usando flex
+2. **Menu Hambúrguer Funcional**: Implemente JavaScript para abrir/fechar a sidebar em mobile
+3. **Ícones Profissionais**: Substitua emojis por Google Material Icons ou Font Awesome
+4. **Dark Mode**: Crie uma versão com tema escuro
+5. **Animações**: Adicione animações de entrada nos elementos
+6. **Campo de Input Expansível**: Faça o campo de entrada crescer ao focar
+7. **Dropdown Funcional**: Implemente o dropdown "2.5 Pro" com opções
+8. **Histórico Interativo**: Adicione mais interações ao clicar nas conversas recentes
+9. **Tooltips**: Adicione tooltips nos ícones ao passar o mouse
+10. **Teclado Virtual**: Simule a abertura de um teclado virtual ao clicar no campo
+11. **Transições de Página**: Adicione transições suaves entre estados
 
 ---
 
@@ -745,17 +727,6 @@ Depois de completar a réplica básica, experimente:
 
 ---
 
-## 🎓 Critérios de Avaliação
-
-| Critério | Peso | Descrição |
-|----------|------|-----------|
-| **Fidelidade Visual** | 30% | Proximidade com o design original do Gemini |
-| **Estrutura HTML** | 20% | Uso correto e semântico de tags HTML5 |
-| **Estilização CSS** | 25% | Qualidade do CSS, uso de flexbox/grid, organização |
-| **Responsividade** | 15% | Layout adaptável para diferentes tamanhos de tela |
-| **Qualidade do Código** | 10% | Código limpo, organizado, indentado e bem comentado |
-
----
 
 ## ❓ Perguntas Frequentes
 
