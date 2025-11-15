@@ -2,8 +2,7 @@
 
 ## 📋 Objetivo da Atividade
 
-Criar uma lista de cards estilizados em HTML5 que apresentem informações sobre disciplinas.
-Cada card deve conter três seções principais: **título**, **conteúdo** e **rodapé**.
+Criar uma lista de cards estilizados em HTML5 que apresentem informações sobre disciplinas. Cada card deve conter três seções principais: **título**, **conteúdo** e **rodapé**.
 
 ## 🎯 Estrutura do Card
 
@@ -58,7 +57,7 @@ Capacitar os alunos no desenvolvimento de interfaces web modernas e responsivas,
 
 ### Passo 1: Estrutura HTML
 
-Crie um arquivo `cards.html` com a estrutura básica do HTML5:
+Crie um arquivo `index.html` com a estrutura básica do HTML5:
 
 ```html
 <!DOCTYPE html>
@@ -67,7 +66,7 @@ Crie um arquivo `cards.html` com a estrutura básica do HTML5:
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cards de Disciplinas</title>
-    <link rel="stylesheet" href="cards.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
@@ -120,7 +119,7 @@ Crie um arquivo `cards.html` com a estrutura básica do HTML5:
 
 ### Passo 2: Estilização CSS
 
-Crie um arquivo `cards.css` para estilizar os cards:
+Crie um arquivo `styles.css` para estilizar os cards:
 
 ```css
 /* Reset básico */
@@ -281,14 +280,14 @@ Depois de implementar o card básico, tente os seguintes desafios:
 
 ## ✅ Checklist de Entrega
 
-- [ ] Arquivo `cards.html` criado com a estrutura correta
-- [ ] Arquivo `cards.css` criado com estilização adequada
-- [ ] Card contém título com nome da disciplina e professores
-- [ ] Card contém conteúdo com objetivo, carga horária, tecnologias e conceitos
-- [ ] Card contém rodapé com horários e locais
-- [ ] Design é responsivo e funciona em diferentes tamanhos de tela
-- [ ] Código está bem indentado e organizado
-- [ ] Projeto está versionado no GitHub
+- [x] Arquivo `index.html` criado com a estrutura correta
+- [x] Arquivo `styles.css` criado com estilização adequada
+- [x] Card contém título com nome da disciplina e professores
+- [x] Card contém conteúdo com objetivo, carga horária, tecnologias e conceitos
+- [x] Card contém rodapé com horários e locais
+- [x] Design é responsivo e funciona em diferentes tamanhos de tela
+- [x] Código está bem indentado e organizado
+- [x] Projeto está versionado no GitHub
 
 ---
 

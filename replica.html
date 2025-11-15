@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gemini - Google AI</title>
+    <link rel="stylesheet" href="replica.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <button class="menu-btn" aria-label="Menu">
+                <span class="material-icons icon" aria-hidden="true">menu</span>
+            </button>
+        </div>
+
+        <div class="new-chat">
+            <button class="new-chat-btn">
+                <span class="material-icons icon" aria-hidden="true">edit</span>
+                <span class="text">Nova conversa</span>
+            </button>
+            <button class="expand-btn" aria-label="Expandir">
+                <span class="material-icons icon" aria-hidden="true">open_in_full</span>
+            </button>
+        </div>
+
+        <div class="gems-section">
+            <button class="gems-btn">
+                <span class="material-icons icon" aria-hidden="true">diamond</span>
+                <span class="text">Veja alguns Gems</span>
+            </button>
+        </div>
+
+        <div class="recent-section">
+            <h3>Recentes</h3>
+            <ul class="recent-list">
+                <li><a href="#">O Que é Uma Landing Page</a></li>
+                <li><a href="#">Tradução de "Tie" para Português</a></li>
+                <li><a href="#">Tradução de Frase Poética em Inglês</a></li>
+                <li><a href="#">como avaliação introdutória de html ...</a></li>
+                <li><a href="#">Box-sizing: Border-box para layouts</a></li>
+                <li><a href="#">KORE11: Rendimentos 2025 em JSON</a></li>
+                <li><a href="#">CSS Display: Valores e Exemplos</a></li>
+                <li><a href="#">Corpo dos Fungos: Hifas e Micélio</a></li>
+            </ul>
+        </div>
+
+        <div class="sidebar-footer">
+            <button class="settings-btn">
+                <span class="material-icons icon" aria-hidden="true">settings</span>
+                <span class="text">Configurações e ajuda</span>
+            </button>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <header class="top-bar">
+            <div class="top-bar-left">
+                <button class="top-menu-btn" id="mobile-menu-btn" aria-label="Abrir menu">
+                    <span class="material-icons icon" aria-hidden="true">menu</span>
+                </button>
+                <button class="search-btn" aria-label="Buscar">
+                    <span class="material-icons icon" aria-hidden="true">search</span>
+                </button>
+                <h1 class="logo">Gemini</h1>
+            </div>
+            <div class="top-bar-right">
+                <button class="upgrade-btn">
+                    <span class="material-icons icon" aria-hidden="true">auto_awesome</span>
+                    <span class="text">Faça upgrade para o Google AI Plus</span>
+                </button>
+                <div class="profile-pic">
+                    <img src="https://via.placeholder.com/40" alt="Perfil do usuário">
+                </div>
+            </div>
+        </header>
+
+        <div class="chat-area">
+            <div class="welcome-message">
+                <h2>Olá, Leonardo</h2>
+            </div>
+
+            <div class="input-container">
+                <div class="input-box">
+                    <input type="text" placeholder="Peça ao Gemini" class="chat-input">
+                    <div class="input-actions">
+                        <button class="action-btn" aria-label="Adicionar">
+                            <span class="material-icons icon" aria-hidden="true">add</span>
+                        </button>
+                        <button class="tools-btn">
+                            <span class="material-icons icon" aria-hidden="true">build</span>
+                            <span class="text">Ferramentas</span>
+                        </button>
+                            <div class="version-wrapper">
+                                <button class="version-selector" id="version-btn" aria-haspopup="true" aria-expanded="false" aria-label="Selecionar versão">
+                                    <span class="text">2.5 Pro</span>
+                                    <span class="material-icons icon" aria-hidden="true">arrow_drop_down</span>
+                                </button>
+                                <ul class="version-menu" id="version-menu" role="menu" aria-labelledby="version-btn" hidden>
+                                    <li role="menuitem" tabindex="-1">2.5 Pro</li>
+                                    <li role="menuitem" tabindex="-1">2.5</li>
+                                    <li role="menuitem" tabindex="-1">2.0</li>
+                                </ul>
+                            </div>
+                        <button class="mic-btn" aria-label="Microfone">
+                            <span class="material-icons icon" aria-hidden="true">mic</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        (function(){
+            const sidebar = document.querySelector('.sidebar');
+            const mobileBtn = document.getElementById('mobile-menu-btn');
+            const sidebarMenuBtn = document.querySelector('.sidebar-header .menu-btn');
+
+            function toggleSidebar() {
+                sidebar.classList.toggle('open');
+                const expanded = sidebar.classList.contains('open');
+                if (mobileBtn) mobileBtn.setAttribute('aria-expanded', expanded);
+                if (sidebarMenuBtn) sidebarMenuBtn.setAttribute('aria-expanded', expanded);
+            }
+
+            if (mobileBtn) mobileBtn.addEventListener('click', toggleSidebar);
+            if (sidebarMenuBtn) sidebarMenuBtn.addEventListener('click', toggleSidebar);
+
+            document.addEventListener('click', (e) => {
+                if (window.innerWidth <= 768 && sidebar.classList.contains('open')) {
+                    const isClickInside = sidebar.contains(e.target) || (mobileBtn && mobileBtn.contains(e.target));
+                    if (!isClickInside) {
+                        sidebar.classList.remove('open');
+                        if (mobileBtn) mobileBtn.setAttribute('aria-expanded','false');
+                        if (sidebarMenuBtn) sidebarMenuBtn.setAttribute('aria-expanded','false');
+                    }
+                }
+            });
+
+            if (mobileBtn) mobileBtn.setAttribute('aria-expanded', 'false');
+            if (sidebarMenuBtn) sidebarMenuBtn.setAttribute('aria-expanded', 'false');
+
+            const versionBtn = document.getElementById('version-btn');
+            const versionMenu = document.getElementById('version-menu');
+            const versionItems = versionMenu ? Array.from(versionMenu.querySelectorAll('[role="menuitem"]')) : [];
+
+            function openVersionMenu(){
+                if (!versionMenu) return;
+                versionMenu.hidden = false;
+                versionBtn.setAttribute('aria-expanded','true');
+                versionItems[0]?.focus();
+            }
+
+            function closeVersionMenu(){
+                if (!versionMenu) return;
+                versionMenu.hidden = true;
+                versionBtn.setAttribute('aria-expanded','false');
+                versionBtn.focus();
+            }
+
+            if (versionBtn){
+                versionBtn.addEventListener('click', (ev)=>{
+                    ev.stopPropagation();
+                    if (!versionMenu) return;
+                    if (versionMenu.hidden) openVersionMenu(); else closeVersionMenu();
+                });
+            }
+
+            versionItems.forEach((item, idx) => {
+                item.addEventListener('click', (ev)=>{
+                    ev.stopPropagation();
+                    const text = item.textContent.trim();
+                    const label = versionBtn.querySelector('.text');
+                    if (label) label.textContent = text;
+                    closeVersionMenu();
+                });
+
+                item.addEventListener('keydown', (ev)=>{
+                    if (ev.key === 'ArrowDown'){
+                        ev.preventDefault();
+                        versionItems[(idx + 1) % versionItems.length].focus();
+                    } else if (ev.key === 'ArrowUp'){
+                        ev.preventDefault();
+                        versionItems[(idx - 1 + versionItems.length) % versionItems.length].focus();
+                    } else if (ev.key === 'Enter' || ev.key === ' '){
+                        ev.preventDefault();
+                        item.click();
+                    }
+                });
+            });
+
+            document.addEventListener('click', (e)=>{
+                if (versionMenu && !versionMenu.contains(e.target) && e.target !== versionBtn){
+                    closeVersionMenu();
+                }
+            });
+
+            document.addEventListener('keydown', (e)=>{
+                if (e.key === 'Escape'){
+                    closeVersionMenu();
+                }
+                if (e.key === 'ArrowDown' && document.activeElement === versionBtn){
+                    e.preventDefault();
+                    openVersionMenu();
+                }
+            });
+        })();
+    </script>
+</body>
+</html>
